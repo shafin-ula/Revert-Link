@@ -1,0 +1,51 @@
+{
+  "name": "Post",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Post title"
+    },
+    "content": {
+      "type": "string",
+      "description": "Post content"
+    },
+    "post_type": {
+      "type": "string",
+      "enum": [
+        "story",
+        "question",
+        "advice",
+        "celebration",
+        "resource_share"
+      ],
+      "description": "Type of post"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Post tags for categorization"
+    },
+    "is_anonymous": {
+      "type": "boolean",
+      "default": false,
+      "description": "Posted anonymously"
+    },
+    "likes_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of likes"
+    },
+    "author_name": {
+      "type": "string",
+      "description": "Author display name"
+    }
+  },
+  "required": [
+    "title",
+    "content",
+    "post_type"
+  ]
+}
