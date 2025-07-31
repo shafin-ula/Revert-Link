@@ -1,0 +1,47 @@
+{
+  "name": "MentorRequest",
+  "type": "object",
+  "properties": {
+    "mentee_name": {
+      "type": "string",
+      "description": "Name of person seeking mentorship"
+    },
+    "mentee_email": {
+      "type": "string",
+      "description": "Email of mentee"
+    },
+    "mentor_email": {
+      "type": "string",
+      "description": "Email of requested mentor"
+    },
+    "mentor_name": {
+      "type": "string",
+      "description": "Name of mentor"
+    },
+    "area_of_help": {
+      "type": "string",
+      "description": "What kind of help is needed"
+    },
+    "message": {
+      "type": "string",
+      "description": "Personal message to mentor"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "accepted",
+        "completed"
+      ],
+      "default": "pending",
+      "description": "Status of mentorship request"
+    }
+  },
+  "required": [
+    "mentee_name",
+    "mentee_email",
+    "mentor_email",
+    "area_of_help",
+    "message"
+  ]
+}
